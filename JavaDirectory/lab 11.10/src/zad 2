@@ -1,0 +1,9 @@
+public  class Main {
+    public static void main(String[] args) {
+    int P=20;
+    int a=P/4;
+
+    System.out.printf("S=" +a*a);
+
+    }
+}

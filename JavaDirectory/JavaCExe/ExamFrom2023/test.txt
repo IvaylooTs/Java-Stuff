@@ -1,0 +1,20 @@
+ID: 0
+Pattern: [1-9]
+Description: num
+Rating: 0
+
+ID: 0
+Pattern: [1-9]
+Description: num
+Rating: 0
+
+ID: 0
+Pattern: [1-9]
+Description: num
+Rating: 0
+
+ID: 0
+Pattern: [a-z]
+Description: onlyletters
+Rating: 0
+
