@@ -1,0 +1,21 @@
+services:
+
+  webapp_mysql:
+    image: mysql:8.0
+    restart: always
+    ports:
+      - 8090:3306
+    command: --init-file /data/application/init.sql
+    environment:
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '1'
+      MYSQL_DATABASE: 'wallet'
+      MYSQL_ROOT_HOST: '0.0.0.0'
+    volumes:
+       - mysql_data:/var/lib/mysql
+       - ./init.sql:/data/application/init.sql
+
+
+volumes:
+  mysql_data:
+    driver: local

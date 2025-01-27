@@ -2,7 +2,6 @@ package com.example.wallet_api;
 
 import com.example.wallet_api.repository.WalletRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 @Service
 public class WalletService {
@@ -14,8 +13,18 @@ public class WalletService {
     }
     public Wallet createWallet(Wallet wallet) {
         // Here you could add validation logic if needed
-        wallet.setBalance(0.0);  // Setting initial balance to 0
+        wallet.setBalance(0.0);
         return walletRepository.save(wallet);
+    }
+    public Wallet deleteWallet(Long walletId) {
+        Optional<Wallet> wallet = walletRepository.findById(walletId);
+        // isPresent(): A method of the Optional class.
+        if (wallet.isPresent()) {
+            walletRepository.delete(wallet.get());
+            return wallet.get();
+        } else {
+            throw new IllegalArgumentException("Wallet with ID " + walletId + " not found.");
+        }
     }
     public Double getBalance(Long walletId) {
         Optional<Wallet> wallet = walletRepository.findById(walletId);

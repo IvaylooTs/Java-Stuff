@@ -31,6 +31,11 @@ public class WalletController {
     // HTTP request should be mapped
     //to the method parameter (Wallet wallet in this case).
 
+    @DeleteMapping("/{id}")
+    public Wallet deleteWallet(@PathVariable Long id) {
+        return walletService.deleteWallet(id);
+    }
+
     // View wallet balance
     @GetMapping("/{id}/balance")
     public Double viewBalance(@PathVariable Long id) {
