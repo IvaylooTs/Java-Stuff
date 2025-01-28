@@ -13,23 +13,29 @@ public class Wallet {
     @Id  // Marks this field as the primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // Automatically generates a unique ID
     private Long id;
-
+    private String name;
     private double balance;
 
     public Wallet() {
         this.balance = 0.0;
     }
 
-    public Wallet(double balance) {
+    public Wallet(Double balance) {
         this.balance = balance;
     }
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getBalance() {
