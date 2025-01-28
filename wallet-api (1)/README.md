@@ -47,6 +47,15 @@ cd wallet-api
 
 ### Step 3: Run the Application
 
+1. You need to first set up Maven, by adding the path to the bin folder as a path in System Variables.
+2. Open a command prompt - you have to move into your project's root folder, where the pom.xml file is located:
+  ```bash
+  C:\Users\User\Desktop\JavaDirectory\wallet-api (1)\wallet-api
+  ```
+3. Use Maven to start your Spring Boot application:
+  ```bash
+  mvn spring-boot:run
+  ```
 The API will start on `http://localhost:8080`.
 
 ## API Documentation
