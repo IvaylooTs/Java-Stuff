@@ -42,7 +42,7 @@ cd wallet-api
 2. The database will be available at `localhost:8090`. Ensure the `application.properties` file reflects this:
 
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:8090/wallet?useSSL=false&serverTimezone=UTC
+   spring.datasource.url=jdbc:mysql://localhost:8090/wallet?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
    ```
 
 ### Step 3: Run the Application
