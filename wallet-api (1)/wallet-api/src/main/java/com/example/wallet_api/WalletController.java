@@ -45,7 +45,6 @@ public class WalletController {
     // id in the URL (e.g., /api/wallets/1/balance) should be passed
     // to the viewBalance method. This allows us to get the specific wallet
     // ID from the URL and pass it to the method for processing.
-    // ----------- It's like inside information to be taken out? --------
 
     // Deposit money into a wallet
     @PutMapping("/{id}/deposit")
