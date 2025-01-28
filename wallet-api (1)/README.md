@@ -58,7 +58,7 @@ The API will start on `http://localhost:8080`.
 
 | HTTP Method | Endpoint                 | Description              | Example Body/Params |
 |-------------|--------------------------|--------------------------|---------------------|
-| POST        | `/api/wallets`           | Create a new wallet      | `{ "name": "John", "balance": 100.0 }` |
+| POST        | `/api/wallets`           | Create a new wallet      | `{ "name": "MyWallet"}` |
 | GET         | `/api/wallets/{id}/balance` | View wallet balance     | `id: 1`             |
 | PUT         | `/api/wallets/{id}/deposit` | Deposit money           | `amount=50.0`       |
 | PUT         | `/api/wallets/{id}/withdraw` | Withdraw money         | `amount=20.0`       |
@@ -71,8 +71,7 @@ The API will start on `http://localhost:8080`.
 - **Body:**
   ```json
   {
-    "name": "John Doe",
-    "balance": 100.0
+    "name": "Stefan's wallet"
   }
   ```
 
